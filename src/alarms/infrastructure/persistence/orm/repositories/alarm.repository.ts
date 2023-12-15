@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { AlarmRepository } from 'src/alarms/application/ports/alarm.repository';
+import { CreateAlarmRepository } from 'src/alarms/application/ports/create-alarm.repository';
 import { Alarm } from 'src/alarms/domain/alarm';
 import { AlarmMapper } from '../mappers/alarm.mapper';
 import { AlarmEntity } from '../entities/alarm-entity';
 
 @Injectable()
-export class OrmAlarmRepository implements AlarmRepository {
+export class OrmAlarmRepository implements CreateAlarmRepository {
   constructor(
     @InjectRepository(AlarmEntity)
     private readonly alarmRepository: Repository<AlarmEntity>,

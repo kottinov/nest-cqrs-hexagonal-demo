@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ApplicationBootstrapOptions } from 'src/common/application-bootstrap-options.interface';
 
@@ -23,6 +24,7 @@ export class CoreModule {
                 synchronize: true,
               }),
             }),
+            MongooseModule.forRoot('mongodb://localhost:27017/vf-read-db'),
           ]
         : [];
 
