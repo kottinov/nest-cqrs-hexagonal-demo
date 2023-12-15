@@ -16,7 +16,7 @@ export class AlarmEntity {
   triggeredAt: Date;
 
   @Column()
-  isAcknowldedged: boolean;
+  isAcknwoledged: boolean;
 
   @OneToMany(() => AlarmItemEntity, (item) => item.alarm, { cascade: true })
   items: AlarmItemEntity[];
