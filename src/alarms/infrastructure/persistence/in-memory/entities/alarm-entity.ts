@@ -5,6 +5,6 @@ export class AlarmEntity {
   name: string;
   severity: string;
   triggeredAt: Date;
-  isAcknowldedged: boolean;
+  isAcknowledged: boolean;
   items: Array<AlarmItemEntity>;
 }
