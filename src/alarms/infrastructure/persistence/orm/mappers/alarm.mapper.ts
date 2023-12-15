@@ -12,7 +12,7 @@ export class AlarmMapper {
     const alarmModel = new Alarm(alarmEntity.id);
 
     alarmModel.name = alarmEntity.name;
-    alarmModel.isAcknowldedged = alarmEntity.isAcknowldedged;
+    alarmModel.isAcknowledged = alarmEntity.isAcknwoledged;
     alarmModel.severity = alarmSeverity;
     alarmModel.triggeredAt = alarmEntity.triggeredAt;
     alarmModel.items = alarmEntity.items.map(
@@ -29,7 +29,7 @@ export class AlarmMapper {
     entity.name = alarm.name;
     entity.severity = alarm.severity.value;
     entity.triggeredAt = alarm.triggeredAt;
-    entity.isAcknowldedged = alarm.isAcknowldedged;
+    entity.isAcknwoledged = alarm.isAcknowledged;
     entity.items = alarm.items.map((item) => {
       const itemEntity = new AlarmItemEntity();
 
