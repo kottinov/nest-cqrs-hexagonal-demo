@@ -10,7 +10,12 @@ import { CqrsModule } from '@nestjs/cqrs';
 import { SharedModule } from './shared/shared.module';
 
 @Module({
-  imports: [CqrsModule.forRoot(), CoreModule, ConfigModule.forRoot(), SharedModule],
+  imports: [
+    CqrsModule.forRoot(),
+    CoreModule,
+    ConfigModule.forRoot(),
+    SharedModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
