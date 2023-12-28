@@ -28,6 +28,7 @@ export class CoreModule {
                 username: configService.get('DATABASE_USERNAME'),
                 password: configService.get('DATABASE_PASSWORD'),
                 database: configService.get('DATABASE_NAME'),
+                logging: true,
                 autoLoadEntities: true,
                 synchronize: true,
               }),
